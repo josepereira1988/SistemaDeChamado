@@ -1,0 +1,9 @@
+﻿@model SistemaDeChamado.Models.PegaChamadoViewModel
+<h6>Atribuir chamado</h6>
+<form asp-action="PegarChamado">
+    <select asp-for="TecnicoId" asp-items="ViewBag.Tecnico"></select>
+    <br />
+    <div class="form-group">
+        <a asp-action="Index" class="btn btn-primary">Voltar</a>|<input type="submit" value="Atribuir" class="btn btn-success" />
+    </div>
+</form>

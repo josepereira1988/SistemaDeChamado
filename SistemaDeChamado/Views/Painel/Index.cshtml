@@ -1,0 +1,194 @@
+﻿@model SistemaDeChamado.Models.PainelChamadoViewModel
+
+<div class="row" width="300px">
+	<div class="col-md-4"><h6>Novos chamados</h6></div>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>
+					Numero
+				</th>
+				<th>
+					Titulo
+				</th>
+				<th>
+					Status
+				</th>
+				<th>
+					Usuario
+				</th>
+				<th>
+					Cliente
+				</th>
+				<th>
+					DT.Abertura
+				</th>
+				@*            <th>
+				@Html.DisplayNameFor(model => model.Finalizado)
+				</th>*@
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var item in Model.Chamados)
+			{
+				<tr>
+					<th>
+						@Html.DisplayFor(modelItem => item.Id)
+					</th>
+					<td>
+						@Html.DisplayFor(modelItem => item.CurtaDescricao)
+					</td>
+					<td>
+						@Html.DisplayFor(modelItem => item.StatusChamado.Descricao)
+					</td>
+					<td>
+						@Html.DisplayFor(modelItem => item.NomeUsuario)
+					</td>
+					<td>
+						@Html.DisplayFor(modelItem => item.Cliente.RazaoSocial)
+					</td>
+					<td>
+						@Html.DisplayFor(modelItem => item.Abertura)
+					</td>
+					<td>
+						<a asp-action="PegarChamado" class="btn btn-warning" asp-route-id="@item.Id">Atribuir</a>
+					</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+</div>
+<hr />
+<div class="row" width="150px">
+	<div class="col-md-2">
+		<h6>Painel Chamados</h6>
+	</div>
+	@if ((User.Claims?.Any(p => p.Value == "Master")).GetValueOrDefault())
+	{
+		<div class="col-md-4"><select id="TecnicoID" onchange="statusChamado()" class="form-control" asp-items="@ViewBag.Tecnico"></select></div>
+	}
+	else
+	{
+		<div class="col-md-4"><select id="TecnicoID" onchange="statusChamado()" class="form-control" asp-items="@ViewBag.Tecnico" hidden></select></div>
+	}
+	<div class="row">
+		<div class="col-12">
+			<div class="row">
+				<div class="col-4">
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" checked="@ViewBag.AguardandoAtendimento" id="AguardandoAtendimento" onchange="statusChamado()" />
+						<label class="form-check-label" for="flexCheckDefault">
+							Aguardando atendimento
+						</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" checked="@ViewBag.EmAndamento" id="EmAndamento" onchange="statusChamado()" />
+						<label class="form-check-label" for="flexCheckDefault">
+							Em Andamento
+						</label>
+					</div>
+				</div>
+				<div class="col-4">
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" checked="@ViewBag.AguardandoCLiente" id="AguardandoCLiente" onchange="statusChamado()" />
+						<label class="form-check-label" for="flexCheckDefault">
+							Aguardando cliente
+						</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" checked="@ViewBag.AguardandoTerceiro" id="AguardandoTerceiro" onchange="statusChamado()" />
+						<label class="form-check-label" for="flexCheckDefault">
+							Aguardando Terceiros
+						</label>
+					</div>
+				</div>
+				<div class="col-4">
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" checked="@ViewBag.Finalizado" id="Finalizado" onchange="statusChamado()" />
+						<label class="form-check-label" for="flexCheckDefault">
+							Finalizado
+						</label>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		
+
+
+	</div>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>
+					Numero
+				</th>
+				<th>
+					Titulo
+				</th>
+				<th>
+					Status
+				</th>
+				<th>
+					Usuario
+				</th>
+				<th>
+					Cliente
+				</th>
+				<th>
+					DT.Abertura
+				</th>
+				@*            <th>
+				@Html.DisplayNameFor(model => model.Finalizado)
+				</th>*@
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var item in Model.SeuChamados)
+			{
+				<tr>
+					<th>
+						@Html.DisplayFor(modelItem => item.Id)
+					</th>
+					<td>
+						@Html.DisplayFor(modelItem => item.CurtaDescricao)
+					</td>
+					<td>
+						@Html.DisplayFor(modelItem => item.StatusChamado.Descricao)
+					</td>
+					<td>
+						@Html.DisplayFor(modelItem => item.NomeUsuario)
+					</td>
+					<td>
+						@Html.DisplayFor(modelItem => item.Cliente.RazaoSocial)
+					</td>
+					<td>
+						@Html.DisplayFor(modelItem => item.Abertura)
+					</td>
+					<td>
+						<a asp-action="Details" class="btn btn-warning" asp-route-id="@item.Id">Details</a>
+					</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+	<script>
+		function Select() {
+			window.location.href = "/Painel/?tecnico=" + document.getElementById("TecnicoID").value;
+		}
+			function statusChamado() {
+				
+			var AguardandoAtendimentoId = document.getElementById("AguardandoAtendimento").checked
+			var EmAtendimentoId = document.getElementById("EmAndamento").checked
+			var AguardandoClienteId = document.getElementById("AguardandoCLiente").checked
+			var AguarandoTerceirosId = document.getElementById("AguardandoTerceiro").checked
+			var FinalizadoId = document.getElementById("Finalizado").checked
+			window.location.href = '/Painel/?tecnico=' + document.getElementById("TecnicoID").value + '&AguardandoAtendimento='
+				+ AguardandoAtendimentoId + '&EmAndamento=' + EmAtendimentoId + '&AguardandoCliente=' + AguardandoClienteId +
+				'&AguardandoTerceiro=' + AguarandoTerceirosId + '&Finalizado=' + FinalizadoId
+			}
+
+	</script>
+</div>

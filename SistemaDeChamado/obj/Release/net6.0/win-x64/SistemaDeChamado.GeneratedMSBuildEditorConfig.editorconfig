@@ -1,0 +1,149 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = SistemaDeChamado
+build_property.RootNamespace = SistemaDeChamado
+build_property.ProjectDir = C:\Users\Junior\Documents\MEGAsync\AJC\SistemaDeChamado\SistemaDeChamado\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Junior\Documents\MEGAsync\AJC\SistemaDeChamado\SistemaDeChamado
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Junior/Documents/MEGAsync/AJC/SistemaDeChamado/SistemaDeChamado/Views/Chamados/CHamadosLinhas.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhbWFkb3NcQ0hhbWFkb3NMaW5oYXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Junior/Documents/MEGAsync/AJC/SistemaDeChamado/SistemaDeChamado/Views/Chamados/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhbWFkb3NcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Junior/Documents/MEGAsync/AJC/SistemaDeChamado/SistemaDeChamado/Views/Chamados/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhbWFkb3NcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Junior/Documents/MEGAsync/AJC/SistemaDeChamado/SistemaDeChamado/Views/Chamados/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhbWFkb3NcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Junior/Documents/MEGAsync/AJC/SistemaDeChamado/SistemaDeChamado/Views/Chamados/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhbWFkb3NcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Junior/Documents/MEGAsync/AJC/SistemaDeChamado/SistemaDeChamado/Views/Chamados/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhbWFkb3NcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Junior/Documents/MEGAsync/AJC/SistemaDeChamado/SistemaDeChamado/Views/Clientes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Junior/Documents/MEGAsync/AJC/SistemaDeChamado/SistemaDeChamado/Views/Clientes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Junior/Documents/MEGAsync/AJC/SistemaDeChamado/SistemaDeChamado/Views/Clientes/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Junior/Documents/MEGAsync/AJC/SistemaDeChamado/SistemaDeChamado/Views/Clientes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Junior/Documents/MEGAsync/AJC/SistemaDeChamado/SistemaDeChamado/Views/Clientes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Junior/Documents/MEGAsync/AJC/SistemaDeChamado/SistemaDeChamado/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Junior/Documents/MEGAsync/AJC/SistemaDeChamado/SistemaDeChamado/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Junior/Documents/MEGAsync/AJC/SistemaDeChamado/SistemaDeChamado/Views/Login/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Junior/Documents/MEGAsync/AJC/SistemaDeChamado/SistemaDeChamado/Views/Painel/CHamadosLinhas.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFpbmVsXENIYW1hZG9zTGluaGFzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Junior/Documents/MEGAsync/AJC/SistemaDeChamado/SistemaDeChamado/Views/Painel/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFpbmVsXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Junior/Documents/MEGAsync/AJC/SistemaDeChamado/SistemaDeChamado/Views/Painel/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFpbmVsXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Junior/Documents/MEGAsync/AJC/SistemaDeChamado/SistemaDeChamado/Views/Painel/PegarChamado.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFpbmVsXFBlZ2FyQ2hhbWFkby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Junior/Documents/MEGAsync/AJC/SistemaDeChamado/SistemaDeChamado/Views/Relatorios/Detalhes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVsYXRvcmlvc1xEZXRhbGhlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Junior/Documents/MEGAsync/AJC/SistemaDeChamado/SistemaDeChamado/Views/Relatorios/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVsYXRvcmlvc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Junior/Documents/MEGAsync/AJC/SistemaDeChamado/SistemaDeChamado/Views/Relatorios/Previa.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVsYXRvcmlvc1xQcmV2aWEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Junior/Documents/MEGAsync/AJC/SistemaDeChamado/SistemaDeChamado/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Junior/Documents/MEGAsync/AJC/SistemaDeChamado/SistemaDeChamado/Views/Shared/_ClassificaoUsuarios.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9DbGFzc2lmaWNhb1VzdWFyaW9zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Junior/Documents/MEGAsync/AJC/SistemaDeChamado/SistemaDeChamado/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Junior/Documents/MEGAsync/AJC/SistemaDeChamado/SistemaDeChamado/Views/Usuarios/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Junior/Documents/MEGAsync/AJC/SistemaDeChamado/SistemaDeChamado/Views/Usuarios/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Junior/Documents/MEGAsync/AJC/SistemaDeChamado/SistemaDeChamado/Views/Usuarios/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Junior/Documents/MEGAsync/AJC/SistemaDeChamado/SistemaDeChamado/Views/Usuarios/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Junior/Documents/MEGAsync/AJC/SistemaDeChamado/SistemaDeChamado/Views/Usuarios/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Junior/Documents/MEGAsync/AJC/SistemaDeChamado/SistemaDeChamado/Views/Usuarios/SalvarSenha.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcU2FsdmFyU2VuaGEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Junior/Documents/MEGAsync/AJC/SistemaDeChamado/SistemaDeChamado/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Junior/Documents/MEGAsync/AJC/SistemaDeChamado/SistemaDeChamado/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Junior/Documents/MEGAsync/AJC/SistemaDeChamado/SistemaDeChamado/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-kcj61nq2e0

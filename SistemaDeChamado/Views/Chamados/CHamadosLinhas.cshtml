@@ -1,0 +1,54 @@
+﻿@model SistemaDeChamado.Models.CreateChamadoLinhasViewModel
+<h4>Respota Chamando: @Model.ChamadoId</h4>
+<hr />
+<div class="row">
+    <form asp-action="ChamadosLinhas">
+        <input asp-for="ChamadoId" hidden />
+        <input asp-for="UsuarioId" hidden />
+        <div class="row">
+            <div class="col-md-4" id="StatusChamado">
+                <div class="form-group">
+                    <label asp-for="StatusChamadoId" class="control-label"></label>
+                    <select asp-for="StatusChamadoId" class="form-control"  asp-items="ViewBag.StatusChamado"></select>
+                </div>
+                @if ((User.Claims?.Any(p => p.Value == "Master")).GetValueOrDefault())
+                {
+                    <div class="form-group">
+                        <label asp-for="DataLancamento" class="control-label"></label>
+                        <input asp-for="DataLancamento" class="form-control" />
+                    </div>
+                }
+                else
+                {
+                    <div class="form-group">
+                        <label asp-for="DataLancamento" class="control-label"></label>
+                        <input asp-for="DataLancamento" class="form-control" readonly />
+                    </div>
+                }
+                <div class="form-group">
+                    <label asp-for="Inicio" class="control-label"></label>
+                    <input asp-for="Inicio" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Fim" class="control-label"></label>
+                    <input asp-for="Fim" class="form-control"/>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="Descricao" class="control-label"></label>
+                    <textarea asp-for="Descricao" rows="8" class="form-control"></textarea>
+                    <span asp-validation-for="Descricao" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <br/>
+        <a asp-action="Details" asp-route-id="@Model.ChamadoId" class="btn btn-primary">Voltar</a> | <input type="submit" value="Responder" class="btn btn-success" />
+    </form>
+</div>
+@if (User.FindFirst("Classificacao").Value == SistemaDeChamado.Essencial.ControleUsuario.Cliente.ToString())
+{
+    <script>
+        document.getElementById("StatusChamado").hidden = true;
+    </script>
+}

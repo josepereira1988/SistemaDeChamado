@@ -1,0 +1,36 @@
+﻿@model SistemaDeChamado.Models.AlterarSenhaUsuarioViewModel
+@{
+    ViewData["Title"] = "AlterarSenha";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h1>Alterar Senha</h1>
+<hr />
+<form asp-action="SalvarSenha">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="Id" />
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label asp-for="Usuario" class="control-label"></label>
+                <input asp-for="Usuario" class="form-control" readonly />
+                <span asp-validation-for="Usuario" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Senha1" class="control-label"></label>
+                <input asp-for="Senha1" class="form-control" />
+                <span asp-validation-for="Senha1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Senha2" class="control-label"></label>
+                <input asp-for="Senha2" class="form-control" />
+                <span asp-validation-for="Senha2" class="text-danger"></span>
+            </div>
+            <br />
+            <div>
+                <a asp-action="Index" class="btn btn-primary">Voltar</a>|<input type="submit" value="Atualizar" class="btn btn-success" />
+            </div>
+        </div>
+    </div>
+    
+</form>
+

@@ -1,0 +1,119 @@
+﻿@model SistemaDeChamado.Models.CreateChamadoViewModel
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1></h1>
+
+<h4>Novo Chamado</h4>
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="CurtaDescricao" class="control-label"></label>
+                        <input asp-for="CurtaDescricao" class="form-control" />
+                        <span asp-validation-for="CurtaDescricao" class="text-danger"></span>
+                    </div>
+                    @*@if ((User.Claims?.Any(p => p.Value == "Cliente")).GetValueOrDefault())*@
+                    <div class="form-group">
+                        <label asp-for="ClienteId" class="control-label"></label>
+                        <select asp-for="ClienteId" class="form-control" asp-items="ViewBag.ClienteId"></select>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="NomeUsuario" class="control-label"></label>
+                        <input asp-for="NomeUsuario" class="form-control" />
+                    </div>
+                    @*                    }else{
+                    <div class="form-group">
+                    <label asp-for="ClienteId" class="control-label"></label>
+                    <select asp-for="ClienteId" class="form-control" asp-items="ViewBag.ClienteId"></select>
+                    </div>
+                    <div class="form-group">
+                    <label asp-for="UsuarioId" class="control-label"></label>
+                    <select asp-for="UsuarioId" class="form-control" asp-items="ViewBag.UsuarioId"></select>
+                    </div>
+                    }*@
+
+
+                    <br />
+                    <div class="form-group">
+                        <a asp-action="Index" class="btn btn-primary">Voltar</a>|<input type="submit" value="Adicionar" class="btn btn-success" />
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="Descricao" class="control-label"></label>
+                        <textarea asp-for="Descricao" rows="8" class="form-control"></textarea>
+                        <span asp-validation-for="Descricao" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+</div>
+<script>
+    let requestInicialCliente = new XMLHttpRequest();
+    requestInicialCliente.open('GET', window.location.href.replace("/Chamados/Create", "/Chamados/Cliente/" + document.getElementById("SelectCliente").value), true)
+    requestInicialCliente.onreadystatechange = function () {
+        document.getElementById("SelectUsuario").selectedIndex = 0;
+        let data = JSON.parse(this.responseText);
+        for (let i = 0; i < data.length; i++) {
+            //alert(data.length)
+            option = document.createElement('option');
+            option.innerHTML = data[i].nome;
+            option.value = data[i].id;
+            document.getElementById("SelectUsuario").appendChild(option);
+        }
+    }
+    requestInicialCliente.send();
+    function selecionarcliente() {
+
+        let url = window.location.href.replace("/Chamados/Create", "/Chamados/Cliente/" + document.getElementById("SelectCliente").value);
+        var select = document.getElementById("SelectUsuario");
+        var options = select.getElementsByClassName("option");
+        //alert(options[1].value);
+        select.selectedIndex = 0;
+        let request = new XMLHttpRequest();
+        request.overrideMimeType("application/json");
+
+        request.open('GET',url , true);
+        request.onreadystatechange = function () {
+            while (select.options.length > 0) {
+                select.remove(0);
+            }
+            let data = JSON.parse(this.responseText);
+            for (let i = 0; i < data.length; i++) {
+                //alert(data.length)
+                option = document.createElement('option');
+                option.innerHTML = data[i].nome;
+                option.value = data[i].id;
+                document.getElementById("SelectUsuario").appendChild(option);
+            }
+        }
+
+        request.send();
+
+
+        //alert("aqui7")
+
+        //
+    }
+
+
+</script>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    }

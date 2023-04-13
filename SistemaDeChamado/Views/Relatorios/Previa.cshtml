@@ -1,0 +1,64 @@
+﻿@model SistemaDeChamado.Entity.PreviaMensal
+
+@*
+@foreach(var p in Model)
+{
+    <input value="@p.RazaoSocial" readonly/>
+    <input value="@p.Tempo" readonly />
+}*@
+<form asp-action="Previa">
+    <input asp-for="DtInicial" id="DtInicial" />
+    <input asp-for="DtFinal" id="DtFinal"/>
+    <input type="submit" value="Pesquisar" class="btn btn-success" />
+</form>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Razão Social
+            </th>
+            <th>
+                TP.Contrato
+            </th>
+            <th>
+                TP.Gasto
+            </th>
+            <th>
+                TP.Restante
+            </th>
+            <th>
+                
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Linhas)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RazaoSocial)
+                </td>
+                <td>
+                    <a>@item.Contrato</a>
+                </td>
+                <td>
+                    <a>@item.Tempo</a>
+                </td>
+                <td>
+                    <a>@item.Restante</a>
+                </td>
+                <td>
+                    <button class="btn btn-warning" onclick="RelatorioDetalhes(@item.Id)">Detalhe</button>
+                </td>
+            </tr>
+        }
+        <script>
+            function RelatorioDetalhes(id){
+                //document.getElementById("DtInicial").value
+                //document.getElementById("DtFinal").value
+                //alert(window.location.protocol + "//" + window.location.host + "/relatorios/Detalhes?Id=" + id + "&dataInicial=" + document.getElementById("DtInicial").value + "&Datafinal="+document.getElementById("DtFinal").value);
+                window.location.href = window.location.protocol + "//" + window.location.host + "/relatorios/Detalhes?Id=" + id + "&dataInicial=" + document.getElementById("DtInicial").value + "&Datafinal=" + document.getElementById("DtFinal").value;
+            }
+        </script>
+    </tbody>
+</table>

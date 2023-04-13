@@ -1,0 +1,60 @@
+﻿@model SistemaDeChamado.Entity.Cliente
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Edit</h1>
+
+<h4>Cliente</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="RazaoSocial" class="control-label"></label>
+                <input asp-for="RazaoSocial" class="form-control" />
+                <span asp-validation-for="RazaoSocial" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CNPJ" class="control-label"></label>
+                <input asp-for="CNPJ" class="form-control" />
+                <span asp-validation-for="CNPJ" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Telefone" class="control-label"></label>
+                <input asp-for="Telefone" class="form-control" />
+                <span asp-validation-for="Telefone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Site" class="control-label"></label>
+                <input asp-for="Site" class="form-control" />
+                <span asp-validation-for="Site" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HorasContrato" class="control-label"></label>
+                <input asp-for="HorasContrato" class="form-control" />
+                <span asp-validation-for="HorasContrato" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Ativo" /> @Html.DisplayNameFor(model => model.Ativo)
+                </label>
+            </div>
+            <div class="form-group">
+                <a asp-action="Index" class="btn btn-primary">Voltar</a>|<input type="submit" value="Atualizar" class="btn btn-success" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

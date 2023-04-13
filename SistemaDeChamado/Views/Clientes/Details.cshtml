@@ -1,0 +1,55 @@
+﻿@model SistemaDeChamado.Entity.Cliente
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Cliente</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.RazaoSocial)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.RazaoSocial)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CNPJ)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CNPJ)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Telefone)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Telefone)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Site)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Site)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HorasContrato)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HorasContrato)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Ativo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Ativo)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,52 @@
+﻿@model IEnumerable<SistemaDeChamado.Models.UsuarioViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Lista de Usuarios</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-success">Novo Usuario</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Usuario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Classificacao)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Usuario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Classificacao)
+            </td>
+            <td>
+                    <a asp-action="Edit" class="btn btn-info" asp-route-id="@item.Id">Editar</a>|<a asp-action="SalvarSenha" class="btn btn-warning" asp-route-id="@item.Id">Alterar Senha</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
